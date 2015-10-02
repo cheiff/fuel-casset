@@ -1231,7 +1231,7 @@ class Casset {
 		else
 			$attr = array();
 
-		return html_tag('script', $attr, PHP_EOL.implode(PHP_EOL, static::$inline_assets['js']).PHP_EOL).PHP_EOL;
+		return html_tag('script', $attr, PHP_EOL.implode(PHP_EOL, Casset_JSMin::minify(static::$inline_assets['js'])).PHP_EOL).PHP_EOL;
 	}
 
 	/**
